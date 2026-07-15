@@ -1,0 +1,39 @@
+header {
+    background-color: burlywood;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+}
+
+header ul{
+    position: absolute;
+    right: 5vw;
+    top:0;
+    line-height: 80px;
+}
+
+header li {
+    display: inline;
+    margin-right:4vw;
+}
+header a {
+    color: white;
+    text-decoration: none;
+}
+header a:hover {
+    text-decoration: underline;
+}
+
+.title{
+    background-color: antiquewhite;
+    color: rgb(94, 47, 47);
+    height:95vh;
+    background-image:url(image練習/pic1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
