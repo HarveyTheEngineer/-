@@ -1,3 +1,12 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header, section, footer {
+    background-color: rgb(165, 134, 66);
+}
+
 header {
     background-color: burlywood;
     height: 80px;
@@ -16,19 +25,37 @@ header li {
     display: inline;
     margin-right:4vw;
 }
+
 header a {
-    color: white;
+    color: rgb(94, 47, 47);;
     text-decoration: none;
 }
+
 header a:hover {
     text-decoration: underline;
 }
+
+h1 {
+    color:rgb(94, 47, 47);;
+    position:absolute;
+    left: 0;
+    top:0;
+    line-height: 80px;
+    /* background-image:url(./img/logo.jpg); */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 210px;
+    /* text-indent: -9999px; */
+}
+
+
 
 .title{
     background-color: antiquewhite;
     color: rgb(94, 47, 47);
     height:95vh;
-    background-image:url(image練習/pic1.png);
+    /* background-image:url(./img/logo.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -37,3 +64,74 @@ header a:hover {
     align-items: center;
     justify-content: center;
 }
+.title h2 {
+    font-size: 40px; margin-bottom: 10px;
+}
+.title p {
+    margin: 25px 0;
+
+}
+.title a {
+    color: (94, 47, 47);
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.title blockquote {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+
+
+.slogan {
+    background-color: brown;
+    color: whitesmoke;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.slogan p {
+    font-size: 10px;
+    line-height: 1.8em;
+}
+
+footer {
+    background-color: burlywood;
+    color: black;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+
+
+.aboutUs {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu img {
+    width: 50%
+
+}  
