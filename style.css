@@ -113,7 +113,18 @@ footer {
 
 
 .aboutUs {
-    margin-bottom: 10px;
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.aboutUs h2 {
+    font-size: 20px;
+}
+.aboutUs p {
+    font-size: 15px;
 }
 
 
@@ -127,11 +138,49 @@ footer {
 
 
 .menu {
+    gap: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .menu img {
-    width: 50%
+    width: 100%
 
 }  
+
+
+.email {
+    background-color: bisque;
+    color: brown;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.email p {
+    margin-bottom: 20px;
+}
+.email input,  .email button {
+    background-color: transparent;
+    color: brown;
+    border: 1px solid rgba(165, 42, 42, 0.781);
+    border-radius: 5px;
+    padding: 10px;
+}
+.email input {
+    width: 200px;
+    margin-right: 15px;
+}
+.email button {
+    width: 80px;
+    cursor: pointer;
+    color: black;
+}
+input::placeholder {
+    color: rgba(165, 42, 42, 0.781);
+}
+input :focus {
+    outline: none;
+    border-color: bisque;
+}
