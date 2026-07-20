@@ -10,36 +10,82 @@
 
 <body>
     <header>
-        <h1>WeMe Nail</h1>
+        <h1><a href="http://127.0.0.1:5500/%E9%A6%96%E9%A0%81.html">
+                <div>WeMe Nail</div>
+            </a></h1>
         <nav>
             <ul>
                 <li><a href="http://127.0.0.1:5500/%E9%A6%96%E9%A0%81.html">首頁</a></li>
                 <li><a href="http://127.0.0.1:5500/%E9%97%9C%E6%96%BC%E5%B7%A5%E4%BD%9C%E5%AE%A4.html">關於工作室</a></li>
-                <!-- <li><a href="#">服務項目</a></li> -->
                 <li><a href="http://127.0.0.1:5500/%E4%BD%9C%E5%93%81%E9%9B%86.html">作品集</a></li>
-                <!-- <li><a href="#">預約資訊</a></li> -->
                 <li><a href="http://127.0.0.1:5500/%E9%A0%90%E7%B4%84.html">預約</a></li>
             </ul>
         </nav>
     </header>
 
+    <main>
+        <section class="menu">
+            <div>
+                <img src="././img/rsz_menu.jpg" onclick="zoomIn()" id="menu">
+            </div>
+            <div>
+                <img src="././img/rsz_manu_2.jpg" onclick="zoomIn()" id="menu">
+            </div>
+        </section>
 
-    <section class="menu">
-        <div>
-            <img src="././img/rsz_menu.jpg">
-        </div>
-        <div>
-            <img src="././img/rsz_manu_2.jpg">
-        </div>
-    </section>
+        <section class="calendar">
+            <h3>請選擇預約時段</h3>
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget"
+                data-url="https://calendly.com/lovebursd7?background_color=e6c9ad&text_color=b07575&primary_color=e8e2c3"
+                style="min-width:320px;height:700px;">
+            </div>
+        
+        </section>
 
-    <section>
+        <section class="reservation">
+            <!-- <div> -->
+            <!-- <pre> -->
+            <!-- 預約格式如下：
+                    ▫️姓名：
+                    ▫️電話：
+                    ▫️預約日期/時段：
+                    ▫️有無需卸甲：
+                    ▫️施作項目：單色/造型
+                    ▫️預算(不含卸甲)： 若無預算考量則可不填寫
+                    ▫️是否已詳閱預約須知： -->
+            <div class="list">
+                <ul>
+                    <li>▫️姓名：<input type="text"></li>
+                    <li>▫️電話：<input type="text"></li>
+                    <li>▫️預約日期/ 時段：<input type="text"></li>
+                    <li>▫️預算(不含卸甲)：<input type="text">(若無預算考量則可不填寫)</li>
+                    <li>▫️有無需卸甲：<input type="checkbox"></li>
+                    <li>▫️施作項目：單色/造型 <input type="checkbox"></li>
+                    <li>▫️是否已詳閱預約須知：<input type="checkbox"></li>
+                </ul>
+                <button>送出</button>
+                <p>💖收到您的訊息後，將盡快回覆😉</p>
+            </div>
+            <!-- </pre> -->
+            <!-- </div> -->
 
+        </section>
 
-    </section>
-
+    </main>
 
     <footer>&copy; Copyright 2026 個人網站, 保留所有權利</footer>
+
+
+    <script>
+        function zoomIn() {
+            let imgElem = document.getElementById('menu');
+            imgElem.style.width = '100vw';
+            imgElem.style.height = '100vh'
+        }
+
+    </script>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 
 </html>
