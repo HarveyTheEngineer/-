@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="chinese-TW">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
@@ -10,82 +10,238 @@
 
 <body>
     <header>
-        <h1><a href="http://127.0.0.1:5500/%E9%A6%96%E9%A0%81.html">
-                <div>WeMe Nail</div>
-            </a></h1>
+        <h1><a href="首頁.html"><div>Weme Nail</div></a></h1>
         <nav>
             <ul>
-                <li><a href="http://127.0.0.1:5500/%E9%A6%96%E9%A0%81.html">首頁</a></li>
-                <li><a href="http://127.0.0.1:5500/%E9%97%9C%E6%96%BC%E5%B7%A5%E4%BD%9C%E5%AE%A4.html">關於工作室</a></li>
-                <li><a href="http://127.0.0.1:5500/%E4%BD%9C%E5%93%81%E9%9B%86.html">作品集</a></li>
-                <li><a href="http://127.0.0.1:5500/%E9%A0%90%E7%B4%84.html">預約</a></li>
+                <li><a href="首頁.html">首頁</a></li>
+                <li><a href="關於工作室.html">關於工作室</a></li>
+                <li><a href="作品集.html">作品集</a></li>
+                <li><a href="預約.html">預約</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
+    <main class="main_edit">
         <section class="menu">
             <div>
-                <img src="././img/rsz_menu.jpg" onclick="zoomIn()" id="menu">
+                <img src="./img/rsz_menu.jpg" onclick="zoomIn(this)" class="menuimg">
             </div>
             <div>
-                <img src="././img/rsz_manu_2.jpg" onclick="zoomIn()" id="menu">
+                <img src="./img/rsz_manu_2.jpg" onclick="zoomIn(this)" class="menu-img">
             </div>
         </section>
 
-        <section class="calendar">
+        <!-- <section class="calendar">
             <h3>請選擇預約時段</h3>
-            <!-- Calendly inline widget begin -->
             <div class="calendly-inline-widget"
                 data-url="https://calendly.com/lovebursd7?background_color=e6c9ad&text_color=b07575&primary_color=e8e2c3"
                 style="min-width:320px;height:700px;">
             </div>
-        
+
+        </section> -->
+
+        <section class="calender-header">
+            <div>
+                <div class="month-selector">
+                    <button id="prev-month">&lt;上月</button>
+                    <div class="month-year" id="current-month"></div>
+                    <button id="next-month">下月&gt;</button>
+                </div>
+            </div>
+
+            <table class="calendar">
+                <thead>
+                    <th>週日</th>
+                    <th>週一</th>
+                    <th>週二</th>
+                    <th>週三</th>
+                    <th>週四</th>
+                    <th>週五</th>
+                    <th>週六</th>
+                </thead>
+                <tbody id="calendar-body">
+
+                </tbody>
+            </table>
         </section>
 
+
+
+
         <section class="reservation">
-            <!-- <div> -->
-            <!-- <pre> -->
-            <!-- 預約格式如下：
-                    ▫️姓名：
-                    ▫️電話：
-                    ▫️預約日期/時段：
-                    ▫️有無需卸甲：
-                    ▫️施作項目：單色/造型
-                    ▫️預算(不含卸甲)： 若無預算考量則可不填寫
-                    ▫️是否已詳閱預約須知： -->
+            
             <div class="list">
                 <ul>
                     <li>▫️姓名：<input type="text"></li>
                     <li>▫️電話：<input type="text"></li>
                     <li>▫️預約日期/ 時段：<input type="text"></li>
-                    <li>▫️預算(不含卸甲)：<input type="text">(若無預算考量則可不填寫)</li>
-                    <li>▫️有無需卸甲：<input type="checkbox"></li>
-                    <li>▫️施作項目：單色/造型 <input type="checkbox"></li>
-                    <li>▫️是否已詳閱預約須知：<input type="checkbox"></li>
+                    <li>▫️預算(不含卸甲)：<input type="text">  (若無預算考量則可不填寫)</li>
+                    <li>▫️有無需卸甲：<input type="checkbox">   <input type="checkbox"></li>
+                    <li>▫️施作項目：單色/造型 <input type="checkbox">   <input type="checkbox"></li>
+                    <li>▫️是否已詳閱預約須知：<input type="checkbox">   <input type="checkbox"></li>
                 </ul>
                 <button>送出</button>
                 <p>💖收到您的訊息後，將盡快回覆😉</p>
             </div>
-            <!-- </pre> -->
-            <!-- </div> -->
-
+          
         </section>
 
     </main>
 
-    <footer>&copy; Copyright 2026 個人網站, 保留所有權利</footer>
+    <footer>
+        <div class="info">
+            <div>
+                <h3><a href="首頁.html">WeMe Nail</a></h3>
+            </div>
+            <div class="footerHeader">
+                <h4>探索</h4>
+                <a href="關於工作室.html">關於工作室</a>
+                <a href="作品集.html">作品集</a>
+                <a href="預約.html">預約資訊</a>
+            </div>
+            <div class="content">
+                <h4>聯絡我們</h4>
+                <div class="content-links">
+                    <!-- <a href="#">email</a> -->
+                    <a href="#">line</a>
+                    <a href="https://www.instagram.com/weme.nail/">ig</a>
+                    <div class="Line">
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                            class="w-9 h-9 border border-background/20 flex items-center justify-center text-background/50 hover:text-background hover:border-background/50 transition-colors"
+                            aria-label="LINE"> <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63h2.386c.349 0 .63.285.63.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.627-.63.349 0 .631.285.631.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314">
+                                </path>
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Copyright">
+            <p>&copy; Copyright 2026 個人網站, 保留所有權利</p>
+        </div>
+    </footer>
 
 
     <script>
-        function zoomIn() {
-            let imgElem = document.getElementById('menu');
-            imgElem.style.width = '100vw';
-            imgElem.style.height = '100vh'
+        function zoomIn(imgElem) {
+            // 建立一個全螢幕的遮罩容器
+            let overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100vw';
+            overlay.style.height = '100vh';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
+            overlay.style.display = 'flex';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.zIndex = '9999';
+            overlay.style.cursor = 'zoom-out';
+
+            // 建立放大後的圖片元素
+            let bigImg = document.createElement('img');
+            bigImg.src = imgElem.src;
+            bigImg.style.maxHeight = '90vh';
+            bigImg.style.maxWidth = '90vw';
+            bigImg.style.objectFit = 'contain';
+            bigImg.style.borderRadius = '8px';
+
+            // 將圖片放入遮罩中
+            overlay.appendChild(bigImg);
+
+            // 將遮罩放入網頁主體中
+            document.body.appendChild(overlay);
+
+            // 點擊遮罩或圖片的任何地方就關閉放大效果
+            overlay.onclick = function () {
+                document.body.removeChild(overlay);
+            };
+        }
+    </script>
+
+    <script>
+        const today = new Date();
+        let currentDate = new Date(today.getFullYear(), today.getMonth(), 1)
+        function initCalendar() {
+            renderCalendar();
+            document.getElementById('prev-month').addEventListener
+                ('click', () => {
+                    currentDate.setMonth(currentDate.getMonth() - 1);
+                    renderCalendar();
+                });
+            document.getElementById('next-month').addEventListener
+                ('click', () => {
+                    currentDate.setMonth(currentDate.getMonth() + 1);
+                    renderCalendar();
+                });
+        }
+        function renderCalendar() {
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+            const today = new Date();
+
+            document.getElementById('current-month').textContent = `${year} 年 ${month + 1}月`
+
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+
+            const daysInMonth = lastDay.getDate();
+            const firstDayOfWeek = firstDay.getDay();
+
+            const calendarBody = document.getElementById('calendar-body');
+            calendarBody.innerHTML = '';
+
+            let date = 1;
+            for (let i = 0; i < 6; i++) {
+                if (date > daysInMonth && i > 0) break;
+
+                const row = document.createElement('tr');
+
+                for (let j = 0; j < 7; j++) {
+                    const cell = document.createElement('td');
+                    if (j === 0 || j === 6) {
+                        cell.classList.add('weekend')
+                    }
+
+                    if (i === 0 && j < firstDayOfWeek) {
+                        const prevMonthLastDay = new Date(year, month, 0).getDate();
+                        const prevDate = prevMonthLastDay - (firstDayOfWeek - j - 1);
+
+                        cell.innerHTML = `<div class="day-number">${prevDate}</div>`;
+                        cell.classList.add('other-month');
+                    } else if (date > daysInMonth) {
+                        const nextDate = date - daysInMonth;
+
+                        cell.innerHTML = `<div class="day-number">${nextDate}</div>`;
+                        cell.classList.add('other-month');
+                        date++
+                    } else {
+                        const currentDateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
+                        const dayOfWeek = new Date(year, month, date).getDay();
+
+                        cell.innerHTML = `<div class="day-number">${date}</div>`;
+
+                        if (year === today.getFullYear() &&
+                            month === today.getMonth() &&
+                            date === today.getDate()) {
+                            cell.classList.add('today');
+                        }
+                        date++;
+                    }
+                    row.appendChild(cell);
+                }
+                calendarBody.appendChild(row);
+            }
         }
 
+        window.onload = initCalendar;
     </script>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
 </body>
 
 </html>
+
+
+
+<!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script> -->
