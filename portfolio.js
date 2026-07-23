@@ -55,3 +55,6 @@ modal.addEventListener('click', (e) => {
         closeModal();
     }
 });
+
+
+

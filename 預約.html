@@ -72,7 +72,7 @@
 
         <section class="reservation">
 
-            <div class="list">
+            <!-- <div class="list">
                 <ul>
                     <li>▫️姓名：<input type="text"></li>
                     <li>▫️電話：<input type="text"></li>
@@ -84,8 +84,63 @@
                 </ul>
                 <button>送出</button>
                 <p>💖收到您的訊息後，將盡快回覆😉</p>
-            </div>
+            </div> -->
+            <div>
+                <form id="reservationForm">
+                    <h3>填寫預約</h3>
+                    <fieldset class="reservationForm_1">
+                        <legend>基本資料</legend>
 
+                        <label for="username">▫️姓名：</label>
+                        <input type="text" id="username">
+                        <br><br>
+                        <label for="userphone">▫️電話：</label>
+                        <input type="tel" id="userphone">
+
+                    </fieldset>
+
+
+                    <fieldset class="reservationForm_2">
+                        <legend>預約內容</legend>
+
+                        ▫️預約日期/ 時段：
+                        <input type="text" id="date">
+
+                        <br><br>
+
+                        ▫️預算(不含卸甲)：
+                        <input type="text" id="budget">
+
+                        <br><br>
+
+                        ▫️有無需卸甲：
+                        <input name="nailclean" type="radio" id="yesClean">
+                        <label for="yesClean">是</label>
+
+                        <input name="nailclean" type="radio" id="noClean">
+                        <label for="noClean">否</label>
+
+                        <br><br>
+
+                        ▫️施作項目：(單色/造型)
+                        <input name="nailStyle" type="radio" id="sig-color">
+                        <label for="sig-color">單色</label>
+
+                        <input name="nailStyle" type="radio" id="customized">
+                        <label for="customized">造型</label>
+
+                        <br><br>
+
+                        ▫️是否已詳閱預約須知：
+                        <input name="read" type="radio" id="yesRead">
+                        <label for="yesRead">是</label>
+
+                    </fieldset>
+
+                    <button type="submit" id="submitBtn">送出預約</button>
+                    <p>💖收到您的訊息後，將盡快回覆😉</p>
+                </form>
+            </div>
         </section>
 
     </main>
@@ -124,125 +179,8 @@
         </div>
     </footer>
 
-    <script>
-        function zoomIn(imgElem) {
-            // 建立一個全螢幕的遮罩容器
-            let overlay = document.createElement('div');
-            overlay.style.position = 'fixed';
-            overlay.style.top = '0';
-            overlay.style.left = '0';
-            overlay.style.width = '100vw';
-            overlay.style.height = '100vh';
-            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.85)';
-            overlay.style.display = 'flex';
-            overlay.style.justifyContent = 'center';
-            overlay.style.alignItems = 'center';
-            overlay.style.zIndex = '9999';
-            overlay.style.cursor = 'zoom-out';
 
-            // 建立放大後的圖片元素
-            let bigImg = document.createElement('img');
-            bigImg.src = imgElem.src;
-            bigImg.style.maxHeight = '90vh';
-            bigImg.style.maxWidth = '90vw';
-            bigImg.style.objectFit = 'contain';
-            bigImg.style.borderRadius = '8px';
-
-            // 將圖片放入遮罩中
-            overlay.appendChild(bigImg);
-
-            // 將遮罩放入網頁主體中
-            document.body.appendChild(overlay);
-
-            // 點擊遮罩或圖片的任何地方就關閉放大效果
-            overlay.onclick = function () {
-                document.body.removeChild(overlay);
-            };
-        }
-
-
-    </script>
-    <script>
-        const today = new Date();
-        let currentDate = new Date(today.getFullYear(), today.getMonth(), 1)
-        function initCalendar() {
-            renderCalendar();
-            document.getElementById('prev-month').addEventListener
-                ('click', () => {
-                    currentDate.setMonth(currentDate.getMonth() - 1);
-                    renderCalendar();
-                });
-            document.getElementById('next-month').addEventListener
-                ('click', () => {
-                    currentDate.setMonth(currentDate.getMonth() + 1);
-                    renderCalendar();
-                });
-        }
-        function renderCalendar() {
-            const year = currentDate.getFullYear();
-            const month = currentDate.getMonth();
-            const today = new Date();
-
-            document.getElementById('current-month').textContent = `${year} 年 ${month + 1}月`
-
-            const firstDay = new Date(year, month, 1);
-            const lastDay = new Date(year, month + 1, 0);
-
-            const daysInMonth = lastDay.getDate();
-            const firstDayOfWeek = firstDay.getDay();
-
-            const calendarBody = document.getElementById('calendar-body');
-            calendarBody.innerHTML = '';
-
-            let date = 1;
-            for (let i = 0; i < 6; i++) {
-                if (date > daysInMonth && i > 0) break;
-
-                const row = document.createElement('tr');
-
-                for (let j = 0; j < 7; j++) {
-                    const cell = document.createElement('td');
-                    if (j === 0 || j === 6) {
-                        cell.classList.add('weekend')
-                    }
-
-                    if (i === 0 && j < firstDayOfWeek) {
-                        const prevMonthLastDay = new Date(year, month, 0).getDate();
-                        const prevDate = prevMonthLastDay - (firstDayOfWeek - j - 1);
-
-                        cell.innerHTML = `<div class="day-number">${prevDate}</div>`;
-                        cell.classList.add('other-month');
-                    } else if (date > daysInMonth) {
-                        const nextDate = date - daysInMonth;
-
-                        cell.innerHTML = `<div class="day-number">${nextDate}</div>`;
-                        cell.classList.add('other-month');
-                        date++
-                    } else {
-                        const currentDateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
-                        const dayOfWeek = new Date(year, month, date).getDay();
-
-                        cell.innerHTML = `<div class="day-number">${date}</div>`;
-
-                        if (year === today.getFullYear() &&
-                            month === today.getMonth() &&
-                            date === today.getDate()) {
-                            cell.classList.add('today');
-                        }
-                        date++;
-                    }
-                    row.appendChild(cell);
-                }
-                calendarBody.appendChild(row);
-            }
-        }
-
-        window.onload = initCalendar;
-
-
-    </script>
-
-
+    <script src="reservation.js"></script>
 
 </body>
 
