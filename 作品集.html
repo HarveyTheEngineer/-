@@ -8,9 +8,11 @@
     <title>作品集</title>
 </head>
 
-<body>
+<body class="bodytest">
     <header>
-        <h1><a href="首頁.html"><div>Weme Nail</div></a></h1>
+        <h1><a href="首頁.html">
+                <div>Weme Nail</div>
+            </a></h1>
         <nav>
             <ul>
                 <li><a href="首頁.html">首頁</a></li>
@@ -22,84 +24,441 @@
     </header>
 
     <main>
-        <section class="portfolio">
-            <h2>作品集</h2>
+        <section class="container">
+            <h2>Portfolio</h2>
 
-        </section>
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">全部分類</button>
+                <button class="filter-btn" data-filter="sig-color">單色</button>
+                <button class="filter-btn" data-filter="france">法式</button>
+                <button class="filter-btn" data-filter="net">格紋</button>
+                <button class="filter-btn" data-filter="mix">暈染</button>
+                <button class="filter-btn" data-filter="sequins">亮片</button>
+                <button class="filter-btn" data-filter="freestyle">自由發揮</button>
+            </div>
 
-        <section>
-            <div class="slideshow-container" style="max-width:1000px;min-width:250px;position:relative;margin:auto;">
 
-                <div class="mySlides fade" style="display: none;">
-                    <div class="numbertext">1 / 4</div>
-                    <img src="https://www.dummyimage.com/600x400/34cfcf/000000" style="width:100%">
-                    <div class="text">Caption Text</div>
+            <div class="gallery-grid">
+
+                <div class="gallery-item" data-category="sig-color" onclick="openModal('墨綠手繪葉脈光療', [
+                'images/nature1-detail1.jpg',
+                'images/nature1-detail2.jpg'
+            ])">
+
+                    <div class="item-image" style="background-image: url(./img/單色/單色鏡面_260722_1.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">單色</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                    </div>
                 </div>
 
-                <div class="mySlides fade" style="display: none;">
-                    <div class="numbertext">2 / 4</div>
-                    <img src="https://www.dummyimage.com/600x400/516/000000" style="width:100%">
-                    <div class="text">Caption Two</div>
+                <div class="gallery-item" data-category="sig-color" onclick="openModal('墨綠手繪葉脈光療', [
+                'images/nature1-detail1.jpg',
+                'images/nature1-detail2.jpg'
+            ])">
+
+                    <div class="item-image" style="background-image: url(./img/單色/單色鏡面_260722_2.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">單色</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                    </div>
                 </div>
 
-                <div class="mySlides fade" style="display: block;">
-                    <div class="numbertext">3 / 4</div>
-                    <img src="https://www.dummyimage.com/600x400/888/000000" style="width:100%">
-                    <div class="text">Caption Three</div>
+                <div class="gallery-item" data-category="sig-color" onclick="openModal('墨綠手繪葉脈光療', [
+                'images/nature1-detail1.jpg',
+                'images/nature1-detail2.jpg'
+            ])">
+
+                    <div class="item-image" style="background-image: url(./img/單色/單色鏡面_260722_3.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">單色</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                    </div>
                 </div>
 
-                <div class="mySlides fade" style="display: none;">
-                    <div class="numbertext">4 / 4</div>
-                    <img src="https://www.dummyimage.com/600x400/333/000000" style="width:100%">
-                    <div class="text">Caption Four</div>
+                <div class="gallery-item" data-category="sig-color" onclick="openModal('墨綠手繪葉脈光療', [
+                'images/nature1-detail1.jpg',
+                'images/nature1-detail2.jpg'
+            ])">
+
+                    <div class="item-image" style="background-image: url(./img/單色/單色鏡面_260722_4.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">單色</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                    </div>
                 </div>
 
+                <div class="gallery-item" data-category="france" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/法式/法式_260722_1.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">法式</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
 
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
+                <div class="gallery-item" data-category="france" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/法式/法式_260722_2.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">法式</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="france" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/法式/法式_260722_3.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">法式</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="france" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/法式/法式_260722_4.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">法式</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="france" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/法式/法式_260722_5.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">法式</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="net" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/格紋/格紋_260722_1.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">格紋</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="net" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/格紋/格紋_260722_2.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">格紋</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="net" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/格紋/格紋_260722_3.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">格紋</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="mix" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/暈染造型/暈染造型_260722_1.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">暈染</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="mix" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/暈染造型/暈染造型_260722_2.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">暈染</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="mix" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/暈染造型/暈染造型_260722_3.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">暈染</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="mix" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/暈染造型/暈染造型_260722_4.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">暈染</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="mix" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/暈染造型/暈染造型_260722_5.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">暈染</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="mix" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/暈染造型/暈染造型_260722_6.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">暈染</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="sequins" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/亮片系列/亮片系列_260722_1.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">亮片</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="sequins" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/亮片系列/亮片系列_260722_2.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">亮片</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="sequins" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/亮片系列/亮片系列_260722_3.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">亮片</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="sequins" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/亮片系列/亮片系列_260722_4.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">亮片</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="sequins" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/亮片系列/亮片系列_260722_5.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">亮片</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="freestyle" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/簡易造型/自由發輝_點線面幾何_手繪_260722_1.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">自由發揮</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="freestyle" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/簡易造型/自由發揮_點線面幾何_手繪_260722_2.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">自由發揮</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="freestyle" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/簡易造型/自由發揮-點線面幾何_手繪_260722_3.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">自由發揮</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="freestyle" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/簡易造型/自由發揮_簡易造型_260722_4.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">自由發揮</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="freestyle" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/簡易造型/自由發揮_簡易造型_260722_5.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">自由發揮</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="freestyle" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/簡易造型/自由發揮_簡易造型_260722_6.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">自由發揮</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="freestyle" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/簡易造型/自由發揮_簡易造型_260722_7.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">自由發揮</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="freestyle" onclick="openModal('深海流體暈染藝術', [
+                './img/法式/法式_260722_1.jpg',
+                './img/法式_260722_2.jpg',
+                './img/法式_260722_3.jpg'
+            ])">
+                    <div class="item-image" style="background-image: url(./img/簡易造型/自由發揮_簡易造型_260722_8.jpg);"></div>
+                    <div class="item-info">
+                        <div class="item-category-tag">自由發揮</div>
+                        <div class="item-title">深海流體暈染藝術</div>
+                        <div class="item-hint">點擊查看多張細節照</div>
+                    </div>
+                </div>
+
 
             </div>
 
-            <div style="text-align:center">
-                <a href="javascript:void(0)" class="dot" onclick="currentSlide(1)" title="slide 1"></a>
-                <a href="javascript:void(0)" class="dot" onclick="currentSlide(2)" title="slide 2"></a>
-                <a href="javascript:void(0)" class="dot" onclick="currentSlide(3)" title="slide 3"></a>
-                <a href="javascript:void(0)" class="dot active" onclick="currentSlide(4)" title="slide 4"></a>
-            </div>
 
         </section>
 
-        <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
+        <div class="modal" id="detailModal">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+                <h3 class="modal-title" id="modalTitle">作品標題</h3>
+                <p style="color: rgb(26, 24, 24); font-size: 0.9rem;">多角度與細部特寫照：</p>
 
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                var i;
-                var slides = document.getElementsByClassName("mySlides fade");
-                var dots = document.getElementsByClassName("dot");
-                if (n > slides.length) { slideIndex = 1 }
-                if (n < 1) { slideIndex = slides.length };
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].classList.remove("active");
-                }
-                slides[slideIndex - 1].style.display = "block";
-                dots[slideIndex - 1].classList.add("active");
-            }
+                <div class="modal-images-grid" id="modalImagesGrid"></div>
+            </div>
+        </div>
 
 
-        </script>
+
     </main>
+
 
     <footer>
         <div class="info">
@@ -134,6 +493,8 @@
             <p>&copy; Copyright 2026 個人網站, 保留所有權利</p>
         </div>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 
 </html>

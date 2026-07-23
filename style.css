@@ -25,7 +25,8 @@ main {
 /* ---------------------------------------- */
 
 header {
-    background-color: burlywood;
+    /* background-color: burlywood; */
+    background-color: rgb(222, 184, 135, 0.8);
     height: 80px;
     width: 100%;
     position: fixed;
@@ -164,10 +165,11 @@ h1 {
     align-items: center;
     gap: 20px;
 }
-.location iframe { 
-    width: 100%; 
-    max-width: 550px; 
-    height: 400px; 
+
+.location iframe {
+    width: 100%;
+    max-width: 550px;
+    height: 400px;
 }
 
 .aboutUs {
@@ -192,107 +194,181 @@ h1 {
 }
 
 /* -------------------------------------------- */
-.portfolio {
-    margin-top: 80px;
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
 }
 
-* {
-    box-sizing: border-box
+.bodytest h2 {
+    color: brown;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
 }
 
-/* Slideshow container */
-.slideshow-container {
-    margin-top: 10px;
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+
+.filter-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 20px;
 }
 
-/* Hide the images by default */
-.mySlides {
+.filter-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #b8aaaa;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    border-color: burlywood;
+    color: #cf7272;
+}
+
+.filter-btn.active {
+    background-color: burlywood;
+    color: #121212;
+    border-color: #fff;
+    font-weight: 500;
+}
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.gallery-item {
+    background-color: whitesmoke;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 隱藏與顯示動畫類別 */
+.gallery-item.hide {
     display: none;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+.gallery-item:hover {
+    transform: translateY(-6px);
 }
 
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
+.item-image {
     width: 100%;
-    text-align: center;
+    height: 280px;
+    background-size: cover;
+    background-position: center;
+    background-color: #dbc3c3;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
+.item-info {
+    padding: 16px;
+}
+
+.item-category-tag {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.item-title {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.item-hint {
+    font-size: 11px;
+    color: #666;
+    margin-top: 6px;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(238, 230, 217, 0.85);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-/* The dots/bullets/indicators */
-.dot {
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background-color: rgb(231, 212, 188);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-    background-color: #717171;
+.modal-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 400;
 }
 
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+
+.modal-images-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
 }
 
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
+.modal-img-card {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    background-color: whitesmoke;
 }
 
 
@@ -319,6 +395,7 @@ h1 {
     object-fit: contain;
     cursor: -webkit-zoom-in;
 }
+
 .main_edit {
     background-color: rgb(252, 230, 201);
 }
@@ -327,7 +404,7 @@ h1 {
     width: 90%;
     max-width: 900px;
     margin: 30px auto;
-    background-color: #f7ede2; /* 柔和的淺米色背景，搭配整體美甲風格 */
+    background-color: #f7ede2;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -341,7 +418,7 @@ h1 {
 }
 
 .month-selector button {
-    background-color: #d4a373; /* 暖棕色系按鈕，取代原本太突兀的綠色 */
+    background-color: #d4a373;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -359,10 +436,9 @@ h1 {
 .month-year {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #6b4f4f; /* 柔和深色字體 */
+    color: #6b4f4f;
 }
 
-/* 日曆表格主體 */
 .calendar {
     width: 100%;
     border-collapse: collapse;
@@ -373,7 +449,7 @@ h1 {
 }
 
 .calendar th {
-    background-color: #ccd5ae; /* 柔和的莫蘭迪綠/米色系當作星期標頭 */
+    background-color: #ccd5ae;
     color: #4a4a4a;
     padding: 12px 0;
     text-align: center;
@@ -382,7 +458,7 @@ h1 {
 
 .calendar td {
     border: 1px solid #e9edc9;
-    height: 90px; /* 適合預約日曆的高度 */
+    height: 90px;
     vertical-align: top;
     padding: 8px;
     position: relative;
@@ -401,29 +477,26 @@ h1 {
     color: #333;
 }
 
-/* 其它月份的日期格子樣式 */
 .other-month {
     background-color: #f4f4f4;
     color: #bcbcbc;
 }
 
-/* 周末顏色微調 */
 .weekend {
-    background-color: #fdf0ed; /* 週末用淡淡的暖粉色區隔 */
+    background-color: #fdf0ed;
 }
 
-/* 當天日期提示框 */
 .today {
     background-color: #faedcd;
     border: 2px solid #d4a373 !important;
 }
 
-/* 手機版 RWD 自適應微調 */
 @media (max-width: 768px) {
     .calendar td {
         height: 70px;
         padding: 4px;
     }
+
     .day-number {
         font-size: 0.9rem;
     }
@@ -492,14 +565,14 @@ input::placeholder {
 
 input:focus {
     outline: none;
-    border-color: bisque;
+    border-color: rgba(165, 42, 42, 0.781);
 }
 
 
 
 /* ------------------------------------------- */
 footer {
-    background-color: burlywood;
+    background-color: rgb(222, 184, 135, 0.8);
     color: black;
     height: auto;
     display: flex;
@@ -559,6 +632,7 @@ footer blockquote {
     flex-direction: column;
     align-items: flex-start;
 }
+
 .content-links {
     display: flex;
     flex-direction: column;
@@ -575,11 +649,11 @@ footer blockquote {
 }
 
 .Copyright {
-    width: 80%;             
-    margin: 0 auto;         
-    padding-top: 20px;      
-    margin-top: 20px;  
-    margin-bottom: 20px;     
-    border-top: 1px solid black; 
-    text-align: center;    
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 1px solid black;
+    text-align: center;
 }
